@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Ensure absolute consistency for cursor interaction across all responsive devices */
+button, 
+a, 
+select, 
+input[type="submit"], 
+input[type="button"], 
+input[type="checkbox"], 
+input[type="radio"], 
+[role="button"], 
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
+/* Base custom text colors & smoothing */
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Pulsing Book Appointment CTA Ring glow pulse */
+@keyframes bg-glow-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(16, 185, 129, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+.cta-glow-pulse {
+  animation: bg-glow-pulse 2s infinite ease-in-out;
+}
+.cta-glow-pulse:hover {
+  animation: none;
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+}
+
+/* Floating animation helper */
+@keyframes soft-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.animate-soft-float-1 {
+  animation: soft-float 3s infinite ease-in-out;
+}
+
+.animate-soft-float-2 {
+  animation: soft-float 3.5s infinite ease-in-out;
+  animation-delay: 0.5s;
+}
+
+.animate-soft-float-3 {
+  animation: soft-float 4s infinite ease-in-out;
+  animation-delay: 1s;
+}

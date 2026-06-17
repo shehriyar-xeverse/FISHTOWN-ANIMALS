@@ -1,0 +1,6 @@
+{
+  "name": "Fishtown Animal Hospital",
+  "description": "A premium, accessible, and fully responsive animated veterinary healthcare website for Fishtown Animal Hospital in Philadelphia.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
